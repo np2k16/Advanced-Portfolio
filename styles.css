@@ -374,7 +374,6 @@ nav{
 .modal__overlay--loading{
     background-color: #242424;
     font-size: 100px;
-    z-index: -1;
 }
 
 .fa-spinner{
