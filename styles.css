@@ -6,6 +6,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
 }
@@ -217,9 +221,11 @@ nav,
     border: none;
     background-color: #242424;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 32px;
     right: 40px;
+    z-index: 100;
+    box-shadow: 0 12px 30px 0 rgb(0,0,0,0.3);
 }
 
 .scroll{
@@ -546,13 +552,14 @@ nav{
     margin-right: 16px;
 }
 
-.project__description--para{
+.project__decription--para{
     margin: 16px 0;
 }
 
 /* FOOTER */
 
 footer{
+    position: relative;
     background-color: #242424;
     display: flex;
     padding: 6% 0;
@@ -623,4 +630,57 @@ footer{
 .shape--8{
     top: 80vh;
     left: 80vw;
+}
+
+/*SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media(max-width: 768px){
+    .title{
+        font-size: 40px;
+    }
+    .header__para{
+        font-size: 20px;
+    }
+    .modal{
+        top: 0;
+        left: 0;
+        transform: none;
+        height: auto;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .modal__half{
+        width: 100%;
+    }
+}
+
+/* SMALL PHONES */
+
+@media(max-width: 480px){
+    .title{
+        font-size: 32px;
+    }
+    .header__para{
+        font-size: 16px;
+    }
+    .nav__link:first-child{
+        display: none;
+    }
+    .project__decription--para{
+        display: none;
+    }
+
+    .project__description{
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .project__description--sub-title{
+        margin-bottom: 8px;
+    }
+    .modal__half{
+        padding: 40px;
+    }
 }
